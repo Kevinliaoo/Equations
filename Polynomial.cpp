@@ -2,13 +2,20 @@
 #include <vector>
 #include <cmath>
 #include "Polynomial.h"
+#include "Equation.h"
 
-Polynomial::Polynomial()
+Polynomial::Polynomial() : Equation()
 {
     this->coefficients.push_back(0);
 }
 
-Polynomial::Polynomial(vector<double> coefs)
+Polynomial::Polynomial(vector<double> coefs) : Equation()
+{
+    for (int i = 0; i < coefs.size(); i++)
+        this->coefficients.push_back(coefs[i]);
+}
+
+Polynomial::Polynomial(vector<int> coefs) : Equation()
 {
     for (int i = 0; i < coefs.size(); i++)
         this->coefficients.push_back(coefs[i]);

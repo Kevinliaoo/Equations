@@ -2,6 +2,7 @@
 #include <vector>
 #include "Polynomial.h"
 #include "Trigonometric.h"
+#include "Exponential.h"
 
 using namespace std;
 
@@ -26,7 +27,12 @@ int main()
     Cosine cos(2, 10, 0.5, 5);
     Tangent tan;
 
-    cout << sin.f(0) << endl;
-    cout << cos.f(0) << endl;
-    cout << tan.f(0) << endl;
+    cout << sin.f(90) << endl;
+    cout << cos.f(90) << endl;
+    cout << tan.f(90) << endl;
+
+    // Exponential function
+    // 10 * 5 ^ (x - 1)
+    Exponential expo(10, 5, 1);
+    cout << expo.f(3) << endl;
 }

@@ -1,5 +1,6 @@
 #include <cmath>
 #include "Trigonometric.h"
+#include "Equation.h"
 
 double Trigonometric::PI = 3.1415926535;
 
@@ -13,7 +14,7 @@ double Trigonometric::radToDeg(double x)
     return (x * 180) / PI;
 }
 
-Trigonometric::Trigonometric()
+Trigonometric::Trigonometric() : Equation()
 {
     this->amplitude = 1;
     this->frequency = 1;
@@ -21,7 +22,7 @@ Trigonometric::Trigonometric()
     this->vertical_shift = 0;
 }
 
-Trigonometric::Trigonometric(double a, double f, double hs, double vs)
+Trigonometric::Trigonometric(double a, double f, double hs, double vs) : Equation()
 {
     this->amplitude = a;
     this->frequency = f;

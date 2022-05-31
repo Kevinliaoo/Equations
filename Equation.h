@@ -3,6 +3,8 @@
 class Equation
 {
 public:
+    Equation(){};
+
     virtual double f(double x) = 0;
 };
 #endif

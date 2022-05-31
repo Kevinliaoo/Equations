@@ -14,6 +14,7 @@ private:
 public:
     Polynomial();
     Polynomial(vector<double> coefs);
+    Polynomial(vector<int> coefs);
 
     int getDegree() { return this->coefficients.size() - 1; };
     double f(double x);
